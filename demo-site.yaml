@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo-wepp-app
+  description: The place to be, for great artists
+  annotations:
+    backstage.io/managed-by-location: url:https://dev.azure.com/akhilesh0917/demo%20project/_git/demo-site?path=/catalog-info.yaml
+spec:
+  type: website
+  lifecycle: production
+  owner: infrastructure
+  system: demo-system
+  dependsOn:
+    - resource:default/demo-db
+  dependencyOf:
+    - component:default/demo-web-lookup
+  providesApis:
+    - demo-api
