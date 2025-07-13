@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: demo-system
+  description: This is a demo system
+spec:
+  owner: demo-team
+  domain: demo
